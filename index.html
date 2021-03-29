@@ -47,13 +47,115 @@
             <button type="button" class="btn btn-primary" onclick="graph_3_setData('Platform', NUM)">Platform</button>
             <button type="button" class="btn btn-primary" onclick="graph_3_setData('Puzzle', NUM)">Puzzle</button>
             <button type="button" class="btn btn-primary" onclick="graph_3_setData('Racing', NUM)">Racing</button>
-            <button type="button" class="btn btn-primary" onclick="graph_3_setData('Role-Playing', NUM)">Role-Playing</button>
-            <button type="button" class="btn btn-primary" onclick="graph_3_setData('Simulation', NUM)">Simulation</button>
+            <button type="button" class="btn btn-primary"
+                onclick="graph_3_setData('Role-Playing', NUM)">Role-Playing</button>
+            <button type="button" class="btn btn-primary"
+                onclick="graph_3_setData('Simulation', NUM)">Simulation</button>
             <button type="button" class="btn btn-primary" onclick="graph_3_setData('Sports', NUM)">Sports</button>
             <button type="button" class="btn btn-primary" onclick="graph_3_setData('Strategy', NUM)">Strategy</button>
             <div id="graph3"></div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+            <h3>Written Questions</h3>
+            <ol>
+                <li>
+                    The horizontal barplot shows a clear representation of the top video game sales of all time, and the
+                    top 10 per year should the user wish to enter a specific year.<br>
+                    The pie chart shows the top 5 best selling genres per region, representing each genre as a
+                    proportional part of the whole.<br>
+                    The vertical barplot shows the top publishers for a genre by total sale count, and allows the user
+                    to select how many publishers to visualize, and which genre to visualize.<br>
+                    All three of these graphs are appropriate for the content they are displaying, and allow the user to
+                    quickly and easily get the info they want at a glance.
+                </li>
+                <li>
+                    Three reasons D3 was helpful:
+                    <ol>
+                        <li>
+                            D3 allowed for very easy dynamic charts simply by calling the same chart function again with
+                            slightly different data.
+                        </li>
+                        <li>
+                            D3's built in transitions/animations allowed for fluid and responsive visualizations that
+                            greatly help UX.
+                        </li>
+                        <li>
+                            D3's tracking and features allowed for easy tooltips, dynamically generated based on the
+                            data the user is hovering over.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Three reasons D3 would not be the best tool for creating a visualization:
+                    <ol>
+                        <li>
+                            D3 runs in Javascript, which requires the use of a browser. This is a non-trivial amount of
+                            processing/resources for a system, and there are many situations in which running a full
+                            browser engine is not feasible. For example, giving a presentation on a screen powered by an
+                            embedded machine that does not have a browser.
+                        </li>
+                        <li>
+                            D3 would not be a good choice to display simple, static data, as it requires a non-trivial
+                            amount of overhead (in resources, developer time, and network bandwidth) simply to set up.
+                            If a user wishes to simply display some basic static data, it makes more sense to generate a
+                            graph quickly in Excel or similar, and share that around. Using D3 for such a task would be
+                            a waste of developer time and computing power, where a simply .jpg export of an Excel graph
+                            would suffice.
+                        </li>
+                        <li>
+                            For advanced visualizations with extreme amounts of data, D3 would not be a good choice. D3
+                            requires the client to load the data browser-side and do computations before finally
+                            rendering in the browser. This is not a feasible solution if the data were of medium to
+                            large size &mdash; most machines could not possibly load a few GBs (or TBs) of data into
+                            memory to process and render in the browser. For this use case, it makes much more sense to
+                            have the data in a dedicated database, and use a native application to process and display
+                            the data to the client.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    I think my dashboard is relatively accessible, according to the second article.
+                    <ul>
+                        <li>
+                            <strong>Follow color contrast guidelines:</strong> My background colors and text have enough
+                            contrast when they are overlapping. I could have however, improved the color contrast
+                            between by bars/slices themselves. However, the lack of contrast is alleviated somewhat by
+                            the wide separation between the elements, as described in the third point.
+                        </li>
+                        <li>
+                            <strong>Label data points directly:</strong> I did this as well &mdash; all axes are labeled
+                            directly.
+                        </li>
+                        <li>
+                            <strong>Separate elements with whitespace or pattern:</strong> All my bars and pie chart
+                            slices have white space separating them.
+                        </li>
+                        <li>
+                            <strong>Avoid complex tooling:</strong> All my interactions are done in the form of explicit
+                            buttons and direct text input rather than sliders and other intricate tools.
+                        </li>
+                        <li>
+                            <strong>Avoid hover overlays:</strong> I labeled data directly as opposed to hover overlays,
+                            except in the third graph where I used a tooltip hover overlay in order to meet the criteria
+                            for this project.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    When I designed the color scheme, I was going much more for a soft, visually-appealing pattern
+                    that's easy on the eyes instead of a high-contrast color scheme. This was purely for aesthetic
+                    purposes, so I could have gone with a higher-contrast gradient for the graphs instead.<br>
+                    In addition, I initially had data labelled directly on the third graph, however the requirements of
+                    the project required a tooltip, and I felt the data was redundant to have both on a hover tooltip
+                    and directly on the graph, so I removed the data that was directly placed on the graph.
+                </li>
+            </ol>
+        </div>
+    </div>
+
     <!--Feel free to add more JavaScript files as needed-->
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="graph1.js"></script>

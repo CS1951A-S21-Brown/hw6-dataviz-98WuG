@@ -10,3 +10,9 @@
 }
 
 /* Include any custom CSS styling here! */
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    color: #996666 !important;
+    background-color: #ffdddd !important;
+    border-color: #ffdddd !important;
+}

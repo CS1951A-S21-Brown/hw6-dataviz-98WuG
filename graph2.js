@@ -35,7 +35,7 @@ let graph_2_setData = region => {
             )
             .attr("fill", d => color(d.data.value.Genre))
             .attr("stroke", "white")
-            .style("stroke-width", "2px")
+            .style("stroke-width", "4px")
             .style("opacity", 1);
 
         let counts = graph_2_svg.selectAll("text").data(pie_data);
