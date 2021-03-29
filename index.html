@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <meta charset="utf-8">
-        <title>Assignment 6 &laquo; Data Visualization Dashboard&raquo;</title>
-        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-        <link rel="stylesheet" href="main.css"/>
-        <!--Feel free to add more CSS files as needed-->
-        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
-    </head>
+    <meta charset="utf-8">
+    <title>Assignment 6 &laquo; Data Visualization Dashboard&raquo;</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css" />
+    <!--Feel free to add more CSS files as needed-->
+    <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+
 <body>
     <div class="header">
         <h3>Assignment 6 &laquo; Data Visualization Dashboard &raquo;</h3>
@@ -15,14 +17,48 @@
     <!--  We included a basic HTML structure for the 3 graphs here. Feel free to change this if you'd like  -->
     <div class="row">
         <div class="col-lg-6">
-            <div id="graph1"></div>
-            <div id="graph2"></div><br/>
+            <form class="form-inline mx-auto" id="year-form">
+                <div class="form-group mb-2">
+                    <label for="year" class="sr-only">Year</label>
+                    <input type="text" class="form-control" id="year" placeholder="year">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Submit</button>
+            </form>
+            <div id="graph1"></div><br>
+            <button type="button" class="btn btn-primary" onclick="graph_2_setData('Global_Sales')">Global</button>
+            <button type="button" class="btn btn-primary" onclick="graph_2_setData('NA_Sales')">NA</button>
+            <button type="button" class="btn btn-primary" onclick="graph_2_setData('EU_Sales')">EU</button>
+            <button type="button" class="btn btn-primary" onclick="graph_2_setData('JP_Sales')">JP</button>
+            <button type="button" class="btn btn-primary" onclick="graph_2_setData('Other_Sales')">Other</button>
+            <div id="graph2"></div><br />
         </div>
         <div class="col-lg-6">
+            <form class="form-inline mx-auto" id="count-form">
+                <div class="form-group mb-2">
+                    <label for="count" class="sr-only">Number of Publishers</label>
+                    <input type="text" class="form-control" id="count" placeholder="Number of Publishers">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Submit</button>
+            </form>
+            <button type="button" class="btn btn-primary" onclick="graph_3_setData('Action', NUM)">Action</button>
+            <button type="button" class="btn btn-primary" onclick="graph_3_setData('Adventure', NUM)">Adventure</button>
+            <button type="button" class="btn btn-primary" onclick="graph_3_setData('Fighting', NUM)">Fighting</button>
+            <button type="button" class="btn btn-primary" onclick="graph_3_setData('Misc')">Misc</button>
+            <button type="button" class="btn btn-primary" onclick="graph_3_setData('Platform', NUM)">Platform</button>
+            <button type="button" class="btn btn-primary" onclick="graph_3_setData('Puzzle', NUM)">Puzzle</button>
+            <button type="button" class="btn btn-primary" onclick="graph_3_setData('Racing', NUM)">Racing</button>
+            <button type="button" class="btn btn-primary" onclick="graph_3_setData('Role-Playing', NUM)">Role-Playing</button>
+            <button type="button" class="btn btn-primary" onclick="graph_3_setData('Simulation', NUM)">Simulation</button>
+            <button type="button" class="btn btn-primary" onclick="graph_3_setData('Sports', NUM)">Sports</button>
+            <button type="button" class="btn btn-primary" onclick="graph_3_setData('Strategy', NUM)">Strategy</button>
             <div id="graph3"></div>
         </div>
     </div>
     <!--Feel free to add more JavaScript files as needed-->
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="graph1.js"></script>
+    <script type="text/javascript" src="graph2.js"></script>
+    <script type="text/javascript" src="graph3.js"></script>
 </body>
+
 </html>

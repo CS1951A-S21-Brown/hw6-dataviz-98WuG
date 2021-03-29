@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: dataviz
+    ports:
+      - 8888:80
+    volumes:
+      - .:/usr/share/nginx/html:ro
